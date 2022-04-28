@@ -11,7 +11,6 @@ html {
 }
 
 body {
-  height: 6000px;
   font-size: 1.6rem;
   background-color: #f7f7f7;
   position: relative;
@@ -30,7 +29,7 @@ img {
 .container {
   display: flex;
   justify-content: center;
-  height: 90px;
+  height: 70px;
   width: 100%;
   margin: 0 auto;
   background-color: #080808;
@@ -68,21 +67,22 @@ img {
 }
 
 .botao a {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   font-size: 2rem;
   font-weight: 400;
   font-family: "Roboto", "Open Sans", sans-serif;
   text-decoration: none;
   justify-content: right;
-  background-color: #25c4c3;
   color: #ffffff;
-  padding: 15px 30px;
-  border-radius: 5px;
+}
+
+.botao a svg {
+  margin-right: 15px;
 }
 
 .botao a:hover {
-  background-color: #2893a4;
-  color: #fff;
+  color: #25c4c3;
 }
 
 /**************************************** INTRODUCTION ****************************************/
