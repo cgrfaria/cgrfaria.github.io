@@ -189,13 +189,14 @@ img {
 
 .about-social {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 20px;
 }
 
 .facebook {
   content: url(./img/Facebook-f_Logo-Black-Logo.wine.svg);
-  padding: 7px;
+  padding: 10px;
   width: 40px;
   height: 40px;
   border: 2px solid #25c4c3;
@@ -204,7 +205,7 @@ img {
 
 .insta {
   content: url(./img/Instagram-Glyph-Black-Logo.wine.svg);
-  padding: 7px;
+  padding: 10px;
   width: 40px;
   height: 40px;
   border: 2px solid #25c4c3;
@@ -213,16 +214,17 @@ img {
 
 .twitter {
   content: url(./img/Twitter-Logo.wine.svg);
-  padding: 9px;
+  padding: 12.5px;
   width: 35px;
   height: 35px;
   border: 2px solid #25c4c3;
   border-radius: 50%;
 }
 
-.dribbble {
-  content: url(./img/dribbble-icon.svg);
-  padding: 11px;
+.github {
+  content: url(./img/GitHub-green.svg);
+  width: 60px;
+  height: 60px;
   border: 2px solid #25c4c3;
   border-radius: 50%;
 }
@@ -230,7 +232,7 @@ img {
 .facebook:hover,
 .insta:hover,
 .twitter:hover,
-.dribbble:hover {
+.github:hover {
   border: 2px solid transparent;
 }
 
