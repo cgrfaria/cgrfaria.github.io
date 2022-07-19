@@ -8,6 +8,7 @@
 html {
   /* A cada 1rem = 10px */
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -44,10 +45,10 @@ img {
 }
 
 .header-menu {
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   display: flex;
   flex-wrap: wrap;
-  gap: 7rem;
+  gap: 10rem;
   align-items: center;
 }
 
@@ -61,7 +62,7 @@ img {
 }
 
 .header-menu a:after {
-  content: "";
+  content: '';
   display: block;
   height: 0.2rem;
   width: 0%;
@@ -80,7 +81,7 @@ img {
   align-items: center;
   font-size: 2rem;
   font-weight: 400;
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   text-decoration: none;
   justify-content: right;
   color: #ffffff;
@@ -93,6 +94,86 @@ img {
 .botao a:hover {
   color: #25c4c3;
 }
+
+/**************************************** LANGUAGES ****************************************/
+
+.lang-switch {
+  display: flex;
+  gap: 2rem;
+  justify-content: end;
+  align-items: center;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0.5;
+  transition: all 0.5s;
+  margin: 15px;
+}
+
+.lang-switch .br {
+  color: #2893a4;
+}
+
+.br_lang {
+  display: none;
+  transition: display 0.5s;
+}
+
+.check {
+  cursor: pointer;
+  position: relative;
+  width: 50px;
+  height: 25px;
+}
+
+.check::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  background: #696969;
+  border-radius: 25px;
+}
+
+.check:checked:before {
+  background: #2893a4;
+}
+
+.check::after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  width: 25px;
+  height: 25px;
+  background: #ffffff;
+  border-radius: 25px;
+  transition: 0.25s;
+  border: 2px solid #696969;
+  box-sizing: border-box;
+}
+
+.check:checked:after {
+  left: 25px;
+  border: 2px solid #2893a4;
+}
+
+input.check:checked div.en_lang {
+  display: none !important;
+}
+
+.check:checked + .br_lang {
+  display: block !important;
+}
+
+/* .active-lang {
+  display: flex !important;
+  transition: display 0.5s;
+}
+
+.active-flag {
+  transition: all 0.5s;
+  opacity: 1 !important;
+} */
 
 /**************************************** INTRODUCTION ****************************************/
 
@@ -125,7 +206,7 @@ img {
 }
 
 .about-txt h2 {
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 4.4rem;
   line-height: 1.6;
@@ -133,7 +214,7 @@ img {
 }
 
 .about-txt h1 {
-  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-family: 'Ubuntu', 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 8rem;
   line-height: 1.1;
@@ -150,7 +231,7 @@ img {
 }
 
 .about-info-hire a {
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   font-size: 3rem;
   font-weight: 500;
   color: #696969;
@@ -257,7 +338,7 @@ img {
 }
 
 .quem h3 {
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 2.2rem;
   line-height: 1.2;
@@ -269,7 +350,7 @@ img {
   max-width: 40ch;
   width: 90vw;
   text-align: center;
-  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-family: 'Ubuntu', 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: 3.6rem;
   line-height: 1.2;
@@ -291,7 +372,7 @@ img {
 }
 
 .sub-sub h4 {
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 2.6rem;
   line-height: 1.2;
@@ -300,7 +381,7 @@ img {
 }
 
 .presentation {
-  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-family: 'Ubuntu', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.5;
@@ -325,7 +406,7 @@ img {
 }
 
 .cursos li {
-  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-family: 'Ubuntu', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.5;
@@ -347,7 +428,7 @@ img {
 .presentation-botao a {
   text-decoration: none;
   font-size: 1.8rem;
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   background-color: #dd53b8;
   color: #f7f7f7;
   padding: 15px 30px;
@@ -390,7 +471,7 @@ img {
   display: block;
   object-fit: cover;
   height: 500px;
-  width: 50vw;
+  width: 100%;
   border-radius: 5px;
 }
 
@@ -406,7 +487,7 @@ img {
 }
 
 .reason-cards p {
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.4;
@@ -429,7 +510,7 @@ img {
 }
 
 .services h3 {
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 2.2rem;
   line-height: 1.2;
@@ -441,7 +522,7 @@ img {
   max-width: 30ch;
   width: 90vw;
   text-align: center;
-  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-family: 'Ubuntu', 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: 3.6rem;
   line-height: 1.2;
@@ -479,7 +560,7 @@ img {
 .services-cards-four h4,
 .services-cards-five h4,
 .services-cards-six h4 {
-  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-family: 'Ubuntu', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 2.6rem;
   line-height: 1.2;
@@ -501,7 +582,7 @@ img {
 }
 
 .services-cards p {
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.4;
@@ -528,8 +609,8 @@ img {
 .skills img {
   display: block;
   object-fit: cover;
-  height: 500px;
-  width: 50vw;
+  height: 50rem;
+  width: 100%;
   border-radius: 5px;
 }
 
@@ -543,7 +624,7 @@ img {
 }
 
 .skills-cards p {
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 1.4;
@@ -555,7 +636,7 @@ img {
 }
 
 .skills-cards svg {
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 
 /**************************************** PORTFOLIO ****************************************/
@@ -570,7 +651,7 @@ img {
 }
 
 .portfolio h3 {
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 2.2rem;
   line-height: 1.2;
@@ -581,7 +662,7 @@ img {
 .sub-portfolio {
   width: 90vw;
   text-align: center;
-  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-family: 'Ubuntu', 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: 3.6rem;
   line-height: 1.2;
@@ -624,7 +705,7 @@ img {
 
 .container-idea {
   height: 50rem;
-  background-image: url("./img/break-back.jpeg");
+  background-image: url('./img/break-back.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -635,7 +716,7 @@ img {
 }
 
 .container-idea h3 {
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 2.4rem;
   line-height: 1.2;
@@ -647,7 +728,7 @@ img {
 .container-idea h2 {
   width: 100%;
   text-align: center;
-  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-family: 'Ubuntu', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 4.6rem;
   line-height: 1.2;
@@ -664,7 +745,7 @@ img {
   display: block;
   font-size: 1.8rem;
   font-weight: 500;
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   text-decoration: none;
   text-transform: uppercase;
   justify-content: center;
@@ -689,7 +770,7 @@ img {
 }
 
 .work h3 {
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 2.2rem;
   line-height: 1.2;
@@ -701,7 +782,7 @@ img {
   max-width: 30ch;
   width: 90vw;
   text-align: center;
-  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-family: 'Ubuntu', 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: 3.6rem;
   line-height: 1.2;
@@ -721,7 +802,7 @@ img {
 }
 
 .number {
-  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-family: 'Ubuntu', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 5rem;
   line-height: 1;
@@ -729,7 +810,7 @@ img {
 }
 
 .topic {
-  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-family: 'Ubuntu', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 2.4rem;
   line-height: 1.2;
@@ -738,7 +819,7 @@ img {
 }
 
 .explanation {
-  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-family: 'Ubuntu', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.5;
@@ -754,7 +835,7 @@ img {
 #contact {
   background-color: #ffebf7;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
 }
 
@@ -762,8 +843,8 @@ img {
   display: block;
   object-fit: cover;
   height: 600px;
-  width: 50vw;
-  border-radius: 5px;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
 }
 
 .contact-cards {
@@ -777,7 +858,7 @@ img {
 }
 
 .contact-cards p {
-  font-family: "Ubuntu", "Open Sans", sans-serif;
+  font-family: 'Ubuntu', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 2rem;
   line-height: 1.2;
@@ -808,7 +889,7 @@ footer {
 }
 
 footer p {
-  font-family: "Roboto", "Open Sans", sans-serif;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
   font-weight: 400;
   display: flex;
   color: #696969;
@@ -872,9 +953,7 @@ footer p {
     display: flex;
     flex-direction: column-reverse;
   }
-  .reason img {
-    width: 100vw;
-  }
+
   .reason-cards {
     display: flex;
     flex-wrap: wrap;
@@ -893,7 +972,6 @@ footer p {
 
   .services-cards {
     grid-template-columns: repeat(auto-fit, minmax(342px, 1fr));
-    max-width: 90vw;
     gap: 30px;
   }
 
@@ -904,15 +982,13 @@ footer p {
     display: flex;
     flex-direction: column;
   }
-  .skills img {
-    width: 100vw;
-  }
+
   .skills-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 20px;
-    width: 95vw;
+    width: 95%;
     padding: 20px;
     justify-items: center;
   }
@@ -1024,7 +1100,7 @@ footer p {
 @media (max-width: 1031px) {
   .container-about {
     gap: 60px;
-    width: 95vw;
+    width: 99%;
     /* margin: 50px auto 0 auto; */
   }
   .container-about::before {
