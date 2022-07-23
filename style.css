@@ -811,6 +811,31 @@ img {
   gap: 30px;
   margin: 60px auto 0 auto;
   max-width: 130rem;
+  position: relative;
+}
+
+.container-work::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#ffa200, #f2a50c);
+  clip-path: circle(25% at 24% 53%);
+  opacity: 0.8;
+}
+
+.container-work::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#25c4c3, #2893a4);
+  clip-path: circle(25% at 76% 70%);
+  opacity: 0.8;
 }
 
 .work h3 {
@@ -833,42 +858,67 @@ img {
   color: #080808;
 }
 
-.work-cards {
+.container-work-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(180px, 1fr));
-  gap: 100px;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 20px;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  max-width: 130rem;
+  margin: 60px 10px 90px 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.work-cards {
+  height: 20rem;
+  padding: 2rem;
+  position: relative;
+  background: rgba(122, 122, 122, 0.2);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
   align-items: center;
   text-align: left;
+  overflow: hidden;
+}
+
+.work-content {
+  font-family: 'Ubuntu', 'Open Sans', sans-serif;
+  font-weight: 400;
   padding-top: 40px;
+  transition: 0.5s;
 }
 
 .number {
-  font-family: 'Ubuntu', 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 5rem;
-  line-height: 1;
-  color: #2893a4;
+  position: absolute;
+  top: -2px;
+  right: 10px;
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: rgba(16, 15, 16, 0.1);
+  pointer-events: none;
 }
 
 .topic {
-  font-family: 'Ubuntu', 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 2.4rem;
-  line-height: 1.2;
+  font-size: 2.8rem;
+  font-weight: 700;
   color: #080808;
   padding: 20px 0;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .explanation {
-  font-family: 'Ubuntu', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.5;
-  color: #696969;
+  color: #303030;
   max-width: 40ch;
+  pointer-events: none;
 }
 
 /**************************************** CONTACT ****************************************/
@@ -1180,17 +1230,34 @@ footer p {
     align-items: end;
     line-height: 2;
   }
+  .container-work-cards {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    gap: 40px;
+  }
 }
 
 @media (max-width: 830px) {
-  .work-cards {
-    grid-template-columns: repeat(2, minmax(180px, 200px));
-    width: 100%;
-    justify-content: space-evenly;
-    gap: 60px;
-  }
   .contact-social {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .container-work-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    gap: 0;
+  }
+  .botao a {
+    flex-direction: row-reverse;
+  }
+  .botao a svg {
+    margin-right: 0px;
+  }
+  .botao a p {
+    opacity: 0;
   }
 }
