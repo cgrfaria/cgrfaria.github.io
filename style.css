@@ -119,6 +119,11 @@ img {
   transition: display 0.5s;
 }
 
+.en_lang + .active {
+  display: block !important;
+  transition: display 0.5s;
+}
+
 .check {
   cursor: pointer;
   position: relative;
@@ -157,22 +162,14 @@ img {
   border: 2px solid #2893a4;
 }
 
-input.check:checked div.en_lang {
+/* .check:checked,
+.en_lang {
   display: none !important;
-}
+} */
 
-.check:checked + .br_lang {
+/* .check:checked,
+.br_lang {
   display: block !important;
-}
-
-/* .active-lang {
-  display: flex !important;
-  transition: display 0.5s;
-}
-
-.active-flag {
-  transition: all 0.5s;
-  opacity: 1 !important;
 } */
 
 /**************************************** INTRODUCTION ****************************************/
@@ -507,6 +504,7 @@ input.check:checked div.en_lang {
   gap: 30px;
   margin: 60px auto 0 auto;
   max-width: 130rem;
+  position: relative;
 }
 
 .services h3 {
@@ -531,6 +529,7 @@ input.check:checked div.en_lang {
 
 .services-cards {
   display: grid;
+  position: relative;
   grid-template-columns: repeat(auto-fit, minmax(391px, 1fr));
   max-width: 85vw;
   gap: 50px;
@@ -547,19 +546,57 @@ input.check:checked div.en_lang {
 .services-cards-six {
   display: grid;
   gap: 20px;
+  position: relative;
   background: #ffffff;
   border: 0.1rem solid #69696933;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   border-radius: 5px;
   padding: 20px;
   justify-items: center;
 }
 
-.services-cards-one h4,
-.services-cards-two h4,
-.services-cards-three h4,
-.services-cards-four h4,
-.services-cards-five h4,
-.services-cards-six h4 {
+.services-cards-one:hover:before,
+.services-cards-two:hover:before,
+.services-cards-three:hover:before,
+.services-cards-four:hover:before,
+.services-cards-five:hover:before,
+.services-cards-six:hover:before {
+  content: '';
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  background-color: #2893a4;
+  border-radius: 50%;
+  transition: 1s;
+}
+
+.services-cards-one:hover .icon,
+.services-cards-two:hover .icon,
+.services-cards-three:hover .icon,
+.services-cards-four:hover .icon,
+.services-cards-five:hover .icon,
+.services-cards-six:hover .icon {
+  box-shadow: 0 0 0 391px #2893a4;
+}
+
+.cards-content h4 {
+  position: relative;
+  transition: 0.5s;
   font-family: 'Ubuntu', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 2.6rem;
@@ -570,18 +607,7 @@ input.check:checked div.en_lang {
   justify-items: center;
 }
 
-.services-cards-one h4 svg,
-.services-cards-two h4 svg,
-.services-cards-three h4 svg,
-.services-cards-four h4 svg,
-.services-cards-five h4 svg,
-.services-cards-six h4 svg {
-  background-color: #2893a4;
-  border: 2px solid #2893a4;
-  border-radius: 100%;
-}
-
-.services-cards p {
+.cards-content p {
   font-family: 'Roboto', 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
@@ -590,6 +616,24 @@ input.check:checked div.en_lang {
   display: grid;
   text-align: center;
   max-width: 32ch;
+  padding-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.services-cards-one:hover .cards-content h4,
+.services-cards-one:hover .cards-content p,
+.services-cards-two:hover .cards-content h4,
+.services-cards-two:hover .cards-content p,
+.services-cards-three:hover .cards-content h4,
+.services-cards-three:hover .cards-content p,
+.services-cards-four:hover .cards-content h4,
+.services-cards-four:hover .cards-content p,
+.services-cards-five:hover .cards-content h4,
+.services-cards-five:hover .cards-content p,
+.services-cards-six:hover .cards-content h4,
+.services-cards-six:hover .cards-content p {
+  color: #ffffff;
 }
 
 /*************************************** BREAKPOINT #2***************************************/

@@ -17,3 +17,16 @@ menulinks.forEach((item) => {
 });
 
 // LANGUAGES //
+
+const br = document.querySelector('.br_lang');
+const en = document.querySelector('.en_lang');
+const switchButton = document.querySelector('.check');
+const changeLanguages = document.querySelector('.active');
+
+function toggleClass() {
+  if (en.classList.contains('active')) {
+    en.classList.remove('active') && br.classList.add('active');
+  } //else {
+  //   changeLanguages.classList.add('active');
+  // }
+}
