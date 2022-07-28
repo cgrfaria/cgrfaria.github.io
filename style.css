@@ -108,18 +108,26 @@ img {
   opacity: 0.5;
   transition: all 0.5s;
   margin: 15px;
+  position: absolute;
+  top: 80px;
 }
 
 .lang-switch .br {
   color: #2893a4;
 }
 
-.br_lang {
+.br_lang,
+.en_lang {
   display: none;
   transition: display 0.5s;
 }
 
-.en_lang + .active {
+.en_lang.active {
+  display: block !important;
+  transition: display 0.5s;
+}
+
+.br_lang.active {
   display: block !important;
   transition: display 0.5s;
 }
@@ -996,6 +1004,9 @@ footer p {
 @media (max-width: 1345px) {
   html {
     font-size: 50%;
+  }
+  .lang-switch {
+    top: 60px;
   }
   .botao a {
     font-size: 2.5rem;
