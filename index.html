@@ -26,10 +26,10 @@
   <section class="en_lang active">
 
     <!----- MENU ----->
-    <header class="header-bg">
+    <header id="intro" class="header-bg">
 
       <div class="header">
-        <a href="./">
+        <a href="#intro">
           <svg width="238" height="36" viewBox="0 0 238 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M17.008 35.672C11.6 35.672 7.47202 34.168 4.62402 31.16C1.80802 28.152 0.400024 23.88 0.400024 18.344C0.400024 15.592 0.832024 13.144 1.69602 11C2.56002 8.82402 3.74402 7.00002 5.24802 5.52802C6.75203 4.02402 8.54403 2.88802 10.624 2.12002C12.704 1.35202 14.96 0.968018 17.392 0.968018C18.8 0.968018 20.08 1.08002 21.232 1.30402C22.384 1.49602 23.392 1.73602 24.256 2.02402C25.12 2.28002 25.84 2.55202 26.416 2.84002C26.992 3.12802 27.408 3.35202 27.664 3.51202L25.504 9.56002C24.48 9.01602 23.28 8.55202 21.904 8.16802C20.56 7.78402 19.024 7.59202 17.296 7.59202C16.144 7.59202 15.008 7.78402 13.888 8.16802C12.8 8.55202 11.824 9.17602 10.96 10.04C10.128 10.872 9.45603 11.96 8.94403 13.304C8.43202 14.648 8.17602 16.28 8.17602 18.2C8.17602 19.736 8.33602 21.176 8.65602 22.52C9.00802 23.832 9.55202 24.968 10.288 25.928C11.056 26.888 12.048 27.656 13.264 28.232C14.48 28.776 15.952 29.048 17.68 29.048C18.768 29.048 19.744 28.984 20.608 28.856C21.472 28.728 22.24 28.584 22.912 28.424C23.584 28.232 24.176 28.024 24.688 27.8C25.2 27.576 25.664 27.368 26.08 27.176L28.144 33.176C27.088 33.816 25.6 34.392 23.68 34.904C21.76 35.416 19.536 35.672 17.008 35.672Z" fill="#ffffff" />
             <path d="M40.618 31.208C40.618 32.648 40.154 33.752 39.226 34.52C38.33 35.256 37.306 35.624 36.154 35.624C35.002 35.624 33.962 35.256 33.034 34.52C32.138 33.752 31.69 32.648 31.69 31.208C31.69 29.768 32.138 28.68 33.034 27.944C33.962 27.176 35.002 26.792 36.154 26.792C37.306 26.792 38.33 27.176 39.226 27.944C40.154 28.68 40.618 29.768 40.618 31.208Z" fill="#25c4c3" />
@@ -83,27 +83,31 @@
 
     <main>
 
-      <section class="container-about">
-        <div class="about-img">
-          <img src="./img/foto-perfil.png" alt="Código">
-        </div>
+      <section class="about-bg">
+        <div class="container-about">
+          <div class="about-img">
+            <img src="./img/keyboard.jpeg" alt="Código">
+          </div>
 
-        <div class="about-info">
-          <div class="about-txt">
-            <h2>Hello, I'm Gustavo</h2>
-            <h1>Professional<br>UI/UX Designer<br> & Web Developer</h1>
-          </div>
-          <div class="about-info-hire">
-            <a href=""><img class="seta-botao" src="./img/seta-botao.svg" alt="seta">Hire Me Now</a>
-          </div>
-          <span class="separador"></span>
-          <div>
-            <ul class="about-social">
-              <li><a class="facebook" href="https://www.facebook.com/carlosgustavo.magu" target="_blank"></a></li>
-              <li><a class="insta" href="https://www.instagram.com/cgrfaria/" target="_blank"></a></li>
-              <li><a class="twitter" href="https://twitter.com/cgrfaria" target="_blank"></a></li>
-              <li><a class="github" href="http://github.com/cgrfaria" target="_blank"></a></li>
-            </ul>
+          <div class="about-info">
+            <div class="about-txt">
+              <h2>Hello, I'm Gustavo</h2>
+              <h1>Professional<br>UI/UX Designer<br> & Web Developer</h1>
+            </div>
+            <div class="about-info-hire">
+              <a class="button-hire" href="#contact"><img class="seta-botao" src="./img/seta-botao.svg" alt="seta">
+                <p>Hire Me Now</p>
+              </a>
+            </div>
+            <span class="separador"></span>
+            <div>
+              <ul class="about-social">
+                <li><a class="facebook" href="https://www.facebook.com/carlosgustavo.magu" target="_blank"></a></li>
+                <li><a class="insta" href="https://www.instagram.com/cgrfaria/" target="_blank"></a></li>
+                <li><a class="twitter" href="https://twitter.com/cgrfaria" target="_blank"></a></li>
+                <li><a class="github" href="http://github.com/cgrfaria" target="_blank"></a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -554,7 +558,7 @@
                 <path d="M12,4c4.41,0,8,3.59,8,8s-3.59,8-8,8c-1.18,0-2.34-0.26-3.43-0.78c-0.27-0.13-0.56-0.19-0.86-0.19 c-0.19,0-0.38,0.03-0.56,0.08l-3.2,0.94l0.94-3.2c0.14-0.47,0.1-0.98-0.11-1.42C4.26,14.34,4,13.18,4,12C4,7.59,7.59,4,12,4 M12,2 C6.48,2,2,6.48,2,12c0,1.54,0.36,2.98,0.97,4.29L1,23l6.71-1.97C9.02,21.64,10.46,22,12,22c5.52,0,10-4.48,10-10 C22,6.48,17.52,2,12,2L12,2z" />
               </g>
               <polygon fill="none" fill-rule="none" points="13,8 11,8 11,11 8,11 8,13 11,13 11,16 13,16 13,13 16,13 16,11 13,11" />
-            </svg> Vamos conversar</a>
+            </svg> Fale Comigo</a>
         </div>
 
       </div>
@@ -563,28 +567,31 @@
     <!----- INTRODUCTION ----->
 
     <main>
-
-      <section class="container-about">
-        <div class="about-img">
-          <img src="./img/foto-perfil.png" alt="Código">
-        </div>
-
-        <div class="about-info">
-          <div class="about-txt">
-            <h2>Olá, eu sou o Gustavo</h2>
-            <h1>Profissional em<br>UI/UX Design &<br>Desenvolvimento Web</h1>
+      <section class="about-bg">
+        <div class="container-about">
+          <div class="about-img">
+            <img src="./img/keyboard.jpeg" alt="Código">
           </div>
-          <div class="about-info-hire">
-            <a href=""><img class="seta-botao" src="./img/seta-botao.svg" alt="seta">Trabalhe comigo</a>
-          </div>
-          <span class="separador"></span>
-          <div>
-            <ul class="about-social">
-              <li><a class="facebook" href="https://www.facebook.com/carlosgustavo.magu" target="_blank"></a></li>
-              <li><a class="insta" href="https://www.instagram.com/cgrfaria/" target="_blank"></a></li>
-              <li><a class="twitter" href="https://twitter.com/cgrfaria" target="_blank"></a></li>
-              <li><a class="github" href="http://github.com/cgrfaria" target="_blank"></a></li>
-            </ul>
+
+          <div class="about-info">
+            <div class="about-txt">
+              <h2>Olá, sou Gustavo</h2>
+              <h1>UI/UX Designer &<br>Desenvolvedor<br>Web + Mobile</h1>
+            </div>
+            <div class="about-info-hire">
+              <a class="button-hire" href="#contact"><img class="seta-botao" src="./img/seta-botao.svg" alt="seta">
+                <p>Contrate-me</p>
+              </a>
+            </div>
+            <span class="separador"></span>
+            <div>
+              <ul class="about-social">
+                <li><a class="facebook" href="https://www.facebook.com/carlosgustavo.magu" target="_blank"></a></li>
+                <li><a class="insta" href="https://www.instagram.com/cgrfaria/" target="_blank"></a></li>
+                <li><a class="twitter" href="https://twitter.com/cgrfaria" target="_blank"></a></li>
+                <li><a class="github" href="http://github.com/cgrfaria" target="_blank"></a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

@@ -31,7 +31,7 @@ img {
 
 /***************************************** Estilo Menu *****************************************/
 .header-bg {
-  background-color: #080808;
+  background-color: #000000;
 }
 
 .header {
@@ -99,19 +99,21 @@ img {
 
 .lang-switch {
   display: flex;
-  gap: 2rem;
-  justify-content: end;
+  gap: 1.5rem;
   align-items: center;
   font-family: 'Roboto', 'Open Sans', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  opacity: 0.5;
+  opacity: 0.8;
   transition: all 0.5s;
   margin: 15px;
   position: absolute;
-  top: 80px;
+  top: 86px;
+  z-index: 1;
 }
-
+.lang-switch .en {
+  color: #f7f7f7;
+}
 .lang-switch .br {
   color: #2893a4;
 }
@@ -170,31 +172,37 @@ img {
   border: 2px solid #2893a4;
 }
 
-/* .check:checked,
-.en_lang {
-  display: none !important;
-} */
-
-/* .check:checked,
-.br_lang {
-  display: block !important;
-} */
-
 /**************************************** INTRODUCTION ****************************************/
+
+.about-bg {
+  background-color: #080808;
+  box-shadow: inset 0 -12rem #f7f7f7;
+  /* position: relative; */
+  /* z-index: -2; */
+}
 
 .container-about {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 140px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  height: 651px;
   max-width: 130rem;
-  margin: 120px auto 0 auto;
+  margin: 0 auto;
+  padding-top: 9rem;
   position: relative;
 }
 
 .about-img {
   display: block;
+  justify-self: center;
+}
+
+.about-img img {
   object-fit: cover;
-  max-width: 450px;
+  height: 100%;
+  width: 100%;
+  max-width: 550px;
+  border-radius: 5px;
 }
 
 .about-info {
@@ -202,7 +210,7 @@ img {
   grid-template-rows: auto auto auto 1fr;
   min-width: 535px;
   align-items: start;
-  gap: 40px;
+  gap: 25px;
 }
 
 .about-txt {
@@ -213,7 +221,7 @@ img {
 .about-txt h2 {
   font-family: 'Roboto', 'Open Sans', sans-serif;
   font-weight: 700;
-  font-size: 4.4rem;
+  font-size: 3rem;
   line-height: 1.6;
   color: #dd53b8;
 }
@@ -221,50 +229,72 @@ img {
 .about-txt h1 {
   font-family: 'Ubuntu', 'Open Sans', sans-serif;
   font-weight: 700;
-  font-size: 8rem;
+  font-size: 6.3rem;
   line-height: 1.1;
-  color: #080808;
+  color: #f7f7f7;
   position: relative;
+  z-index: 1;
 }
 
-.about-txt h1::after {
+.en_lang .about-txt h1::after {
   content: url(./img/detalhes.svg);
   position: absolute;
   z-index: -1;
-  right: 190px;
-  top: -30px;
+  right: 200px;
+  top: -41px;
 }
 
-.about-info-hire a {
-  font-family: 'Roboto', 'Open Sans', sans-serif;
-  font-size: 3rem;
-  font-weight: 500;
-  color: #696969;
-  position: relative;
+.br_lang .about-txt h1::after {
+  content: url(./img/detalhes.svg);
+  position: absolute;
+  z-index: -1;
+  right: 115px;
+  top: -41px;
+}
+
+.about-info .about-info-hire .button-hire {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
   align-items: center;
   text-decoration: none;
   padding: 10px 0 10px 0;
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #696969;
 }
 
 .seta-botao {
   background: #dd53b8;
-  padding: 1rem;
+  padding: 0.7rem;
   border-radius: 0px 10px 0px 0px;
+  transition: 0.5s;
 }
 
-.seta-botao:hover {
+.button-hire:hover .seta-botao {
   background: #974581;
 }
 
-.container-about::after {
+.button-hire:hover p {
+  color: #b3b3b3;
+}
+
+.en_lang .container-about::after {
   content: url(./img/seta-amarela.svg);
   position: absolute;
-  top: 300px;
-  right: 372px;
+  top: 290px;
+  right: 310px;
   height: 50px;
+  width: 50px;
+}
+
+.br_lang .container-about::after {
+  content: url(./img/seta-amarela.svg);
+  position: absolute;
+  top: 290px;
+  right: 330px;
+  height: 46px;
   width: 50px;
 }
 
@@ -279,7 +309,7 @@ img {
   content: url(./img/mouse.svg);
   position: absolute;
   right: 1px;
-  top: 433px;
+  top: 399px;
 }
 
 .about-social {
@@ -1006,28 +1036,36 @@ footer p {
     font-size: 50%;
   }
   .lang-switch {
-    top: 60px;
+    top: 64px;
   }
   .botao a {
     font-size: 2.5rem;
   }
   .container-about {
     gap: 100px;
-    margin: 150px auto 0 auto;
+    padding-top: 12rem;
   }
   .container-about::before {
     top: 370px;
   }
-  .container-about::after {
-    top: 204px;
+  .en_lang .container-about::after {
+    top: 300px;
     right: 274px;
+  }
+  .br_lang .container-about::after {
+    top: 370px;
+    right: 230px;
   }
   .about-info {
     gap: 20px;
   }
-  .about-txt h1::after {
-    right: 13.5rem;
-    top: -5.4rem;
+  .en_lang .about-txt h1::after {
+    right: 106px;
+    top: -42px;
+  }
+  .br_lang .about-txt h1::after {
+    right: 8px;
+    top: -40px;
   }
   .about-info-hire a {
     gap: 15px;
