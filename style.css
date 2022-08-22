@@ -513,7 +513,8 @@ img {
 .reason-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(292px, 298px));
-  gap: 60px;
+  gap: 50px;
+  padding-inline: 20px;
   justify-content: center;
 }
 
@@ -592,6 +593,7 @@ img {
   border-radius: 5px;
   padding: 20px;
   justify-items: center;
+  height: 285px;
 }
 
 .services-cards-one:hover:before,
