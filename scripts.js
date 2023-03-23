@@ -5,9 +5,11 @@ const hamburguer = document.querySelector('.hamburguer');
 const menulinks = document.querySelectorAll('.header-menu li a');
 
 function closeHamburgerMenu() {
-  document.body.style.overflow = show ? 'hidden' : 'initial';
-  containerhamburguer.classList.toggle('on', show);
-  show = !show;
+  if (window.innerWidth <= 1345) {
+    document.body.style.overflow = show ? 'hidden' : 'initial';
+    containerhamburguer.classList.toggle('on', show);
+    show = !show;
+  }
 }
 
 hamburguer.addEventListener('click', closeHamburgerMenu);
