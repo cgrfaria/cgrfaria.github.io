@@ -1051,7 +1051,7 @@ footer p {
     top: 370px;
   }
   .en_lang .container-about::after {
-    top: 300px;
+    top: 239px;
     right: 274px;
   }
   .br_lang .container-about::after {
@@ -1062,8 +1062,8 @@ footer p {
     gap: 20px;
   }
   .en_lang .about-txt h1::after {
-    right: 106px;
-    top: -42px;
+    right: 175px;
+    top: -50px;
   }
   .br_lang .about-txt h1::after {
     right: 8px;
@@ -1189,8 +1189,8 @@ footer p {
   }
   .container-hamburguer.on .hamburguer {
     position: absolute;
-    right: 24px;
-    top: 47px;
+    right: 10px;
+    top: 20px;
   }
   .container-hamburguer.on .hamburguer .one {
     transform: rotate(45deg) translate(7px, 7px);
@@ -1291,6 +1291,20 @@ footer p {
   .contact-social {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .en_lang .container-about::after {
+    display: none;
+  }
+  .container-about {
+    display: flex;
+    gap: 0px;
+    justify-content: space-between;
+  }
+  .about-img img {
+    display: none;
   }
 }
 
