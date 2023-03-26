@@ -512,7 +512,7 @@ img {
 
 .reason-cards {
   display: grid;
-  grid-template-columns: repeat(2, minmax(292px, 298px));
+  grid-template-columns: repeat(2, minmax(292px, 200px));
   gap: 50px;
   padding-inline: 20px;
   justify-content: center;
@@ -1298,13 +1298,23 @@ footer p {
   .en_lang .container-about::after {
     display: none;
   }
+  .en_lang .about-txt h1::after {
+    right: 75px;
+  }
   .container-about {
     display: flex;
     gap: 0px;
-    justify-content: space-between;
+    justify-content: center;
+    height: 600px;
   }
   .about-img img {
     display: none;
+  }
+  .about-info {
+    min-width: auto;
+  }
+  .container-we-are {
+    margin-top: -60px;
   }
 }
 
